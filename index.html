@@ -103,14 +103,34 @@
     }
 
     .tagline-text {
-      margin: clamp(3px, 0.7dvh, 8px) 0 clamp(6px, 1.4dvh, 14px);
-      font-size: clamp(11.5px, 3.2vw, 13.5px);
-      letter-spacing: 0.01em;
-      color: #dedede;
-      font-weight: 400;
-      line-height: 1.3;
+      margin: clamp(4px, 0.9dvh, 9px) 0 clamp(8px, 1.5dvh, 14px);
       text-align: center;
-      white-space: nowrap;
+      line-height: 1.45;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: clamp(2px, 0.4dvh, 4px);
+      user-select: none;
+    }
+
+    .tagline-line-1 {
+      font-size: clamp(13px, 3.4vw, 15.5px);
+      font-weight: 800;
+      letter-spacing: 0.03em;
+      background: linear-gradient(135deg, #fff7d6 0%, #e8c680 40%, #cfa861 75%, #a87e35 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+    }
+
+    .tagline-line-2 {
+      font-size: clamp(11.5px, 2.9vw, 13px);
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      background: linear-gradient(135deg, #fae8b4 0%, #d8b26e 50%, #b88d44 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      opacity: 0.96;
     }
 
     /* Link Cards List */
@@ -511,10 +531,10 @@
           </g>
         </svg>
 
-        <p class="tagline-text font-medium">
-          <span class="text-[#d6b26d] font-bold">أفخم علب مجوهرات</span> تفصيل لأغلى مقتنياتك.
-          <span class="inline-block align-middle text-[#e5c176] mr-1" aria-hidden="true">✨</span>
-        </p>
+        <div class="tagline-text">
+          <span class="tagline-line-1">أفخم علب مجوهرات</span>
+          <span class="tagline-line-2">أحدث تشكيل من مستلزمات عرض الأكسسوارات</span>
+        </div>
       </header>
 
       <!-- Social & Location Link Cards -->
@@ -562,7 +582,7 @@
           </div>
           <div class="flex flex-col text-right">
             <span class="card-title font-bold">تيك توك</span>
-            <span class="card-subtitle">كواليس الشغل وتفاصيل التصنيع</span>
+            <span class="card-subtitle">مقاطع كل ما هو تريند</span>
           </div>
           <div class="chevron-icon" aria-hidden="true">
             <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
@@ -587,7 +607,7 @@
           </div>
           <div class="flex flex-col text-right">
             <span class="card-title font-bold">تيليجرام</span>
-            <span class="card-subtitle">استفسارات ومتابعة الأوردرات</span>
+            <span class="card-subtitle">شاهد كل ما لدينا</span>
           </div>
           <div class="chevron-icon" aria-hidden="true">
             <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
@@ -599,7 +619,7 @@
         <!-- 4. WhatsApp -->
         <a
           id="link-whatsapp"
-          href="https://wa.me/+2020102098585957"
+          href="https://wa.me/+201098585957"
           target="_blank"
           rel="noopener noreferrer"
           data-platform="واتساب"
@@ -612,7 +632,7 @@
           </div>
           <div class="flex flex-col text-right">
             <span class="card-title font-bold">واتساب</span>
-            <span class="card-subtitle">شات مباشر وطلبات التفصيل الخاصة</span>
+            <span class="card-subtitle">تواصل مباشراً للاستفسار</span>
           </div>
           <div class="chevron-icon" aria-hidden="true">
             <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
@@ -733,7 +753,7 @@
         <!-- Footer WhatsApp -->
         <a
           id="footer-whatsapp"
-          href="https://wa.me/+2020102098585957"
+          href="https://wa.me/+201098585957"
           target="_blank"
           rel="noopener noreferrer"
           data-platform="واتساب"
@@ -807,7 +827,7 @@
           letterGlyph: 'E',
           btnLabel: 'English',
           btnTitle: 'Switch to English',
-          tagline: '<span class="text-[#d6b26d] font-bold">أفخم علب مجوهرات</span> تفصيل لأغلى مقتنياتك<span class="inline-block align-middle text-[#e5c176] mr-1" aria-hidden="true">✨</span>',
+          tagline: '<span class="tagline-line-1">أفخم علب مجوهرات</span><span class="tagline-line-2">أحدث تشكيل من مستلزمات عرض الأكسسوارات</span>',
           cards: {
             'link-instagram': {
               title: 'إنستجرام',
@@ -816,17 +836,17 @@
             },
             'link-tiktok': {
               title: 'تيك توك',
-              subtitle: 'كواليس الشغل وتفاصيل التصنيع',
+              subtitle: 'مقاطع كل ما هو تريند',
               platform: 'تيك توك'
             },
             'link-telegram': {
               title: 'تيليجرام',
-              subtitle: 'استفسارات ومتابعة الأوردرات',
+              subtitle: 'شاهد كل ما لدينا',
               platform: 'تيليجرام'
             },
             'link-whatsapp': {
               title: 'واتساب',
-              subtitle: 'شات مباشر وطلبات التفصيل الخاصة',
+              subtitle: 'تواصل مباشراً للأستفسار',
               platform: 'واتساب'
             },
             'link-facebook': {
@@ -859,7 +879,7 @@
           letterGlyph: 'ع',
           btnLabel: 'عربي',
           btnTitle: 'التبديل إلى اللغة العربية',
-          tagline: '<span class="text-[#d6b26d] font-bold">Premium</span> custom jewelry boxes for your treasures<span class="inline-block align-middle text-[#e5c176] ml-1" aria-hidden="true">✨</span>',
+          tagline: '<span class="tagline-line-1">Finest Luxury Jewelry Boxes</span><span class="tagline-line-2">Latest Collection of Accessory Display Essentials</span>',
           cards: {
             'link-instagram': {
               title: 'Instagram',
@@ -868,17 +888,17 @@
             },
             'link-tiktok': {
               title: 'TikTok',
-              subtitle: 'Behind-the-Scenes & Crafting',
+              subtitle: 'Trending Reels & Latest Highlights',
               platform: 'TikTok'
             },
             'link-telegram': {
               title: 'Telegram',
-              subtitle: 'Order Inquiries & Updates',
+              subtitle: 'Explore Our Full Collection',
               platform: 'Telegram'
             },
             'link-whatsapp': {
               title: 'WhatsApp',
-              subtitle: 'Direct Chat & Custom Orders',
+              subtitle: 'Chat Directly for Inquiries',
               platform: 'WhatsApp'
             },
             'link-facebook': {
