@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <title>ELMANAR Jewelry Boxes — Official Links</title>
+  <title>المنار لعلب المجوهرات — الروابط الرسمية</title>
   <script src="https://cdn.tailwindcss.com/3.4.17"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
       --gold-light: #f5df9e;
@@ -28,7 +28,7 @@
       height: 100dvh;
       max-width: 100vw;
       overflow: hidden;
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      font-family: 'Cairo', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
       background-color: #070707;
       color: #ffffff;
       position: relative;
@@ -174,7 +174,7 @@
       box-shadow:
         inset 0 1px 2px rgba(255, 232, 184, 0.28),
         0 3px 7px rgba(0, 0, 0, 0.45);
-      margin-right: 14px;
+      margin-inline-end: 14px;
       transition: transform 0.2s ease, border-color 0.2s ease;
     }
 
@@ -205,14 +205,14 @@
     }
 
     .chevron-icon {
-      margin-left: auto;
-      padding-left: 8px;
+      margin-inline-start: auto;
+      padding-inline-start: 8px;
       color: #bfa065;
       transition: transform 0.2s ease, color 0.2s ease;
     }
 
     .link-card:hover .chevron-icon {
-      transform: translateX(3px);
+      transform: translateX(-3px);
       color: #f0d493;
     }
 
@@ -270,6 +270,88 @@
       opacity: 1;
       transform: translateX(-50%) translateY(0);
     }
+  
+    /* Luxury Gold Language Switcher Button */
+    .lang-switcher-wrap {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+      padding-inline: 4px;
+      margin-bottom: 2px;
+      z-index: 20;
+    }
+
+    /* Premium Segmented Dual-Letter (ع | E) Switcher */
+    .lang-switch-btn {
+      display: inline-flex;
+      align-items: center;
+      padding: 3px;
+      gap: 3px;
+      border-radius: 9999px;
+      background: linear-gradient(135deg, rgba(46, 38, 28, 0.92) 0%, rgba(20, 17, 13, 0.96) 100%);
+      border: 1.3px solid rgba(214, 175, 105, 0.55);
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.6), inset 0 1px 1px rgba(255, 238, 195, 0.22);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      cursor: pointer;
+      user-select: none;
+      transition: transform 0.2s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .lang-switch-btn:hover, .lang-switch-btn:focus-visible {
+      transform: translateY(-1px) scale(1.03);
+      border-color: rgba(240, 204, 136, 0.88);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.72), 0 0 12px rgba(214, 175, 105, 0.28);
+      outline: none;
+    }
+
+    .lang-switch-btn:active {
+      transform: translateY(0) scale(0.98);
+    }
+
+    .lang-segment {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: clamp(28px, 3.8dvh, 33px);
+      height: clamp(24px, 3.4dvh, 28px);
+      border-radius: 9999px;
+      font-size: clamp(12.5px, 1.8dvh, 14.5px);
+      font-weight: 700;
+      line-height: 1;
+      color: rgba(206, 169, 104, 0.52);
+      transition: all 0.22s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .lang-segment.active {
+      background: linear-gradient(145deg, #f7e3aa 0%, #d7b16a 52%, #b48a44 100%);
+      color: #14110b;
+      font-weight: 800;
+      box-shadow: 0 2px 7px rgba(0, 0, 0, 0.5), inset 0 1px 1px rgba(255, 248, 225, 0.7);
+    }
+
+    .lang-segment-ar {
+      font-family: 'Cairo', sans-serif;
+      padding-bottom: 1px;
+    }
+
+    .lang-segment-en {
+      font-family: 'Cinzel', 'Inter', serif;
+    }
+
+    .lang-switch-btn:hover, .lang-switch-btn:focus-visible {
+      transform: translateY(-1px) scale(1.04);
+      border-color: rgba(240, 204, 136, 0.88);
+      background: linear-gradient(135deg, rgba(68, 58, 44, 0.92) 0%, rgba(38, 33, 26, 0.96) 100%);
+      color: #fff4d1;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.65), 0 0 12px rgba(209, 169, 98, 0.28);
+      outline: none;
+    }
+
+    .lang-switch-btn:active {
+      transform: translateY(0) scale(0.97);
+    }
+
   </style>
 </head>
 <body>
@@ -367,6 +449,16 @@
   <main class="page-shell">
     <div class="w-full flex flex-col items-center">
       <!-- 100% Vector Brand Emblem & 3D Gold Header Lockup -->
+            <!-- Language Switcher Button -->
+      <div class="lang-switcher-wrap">
+        <button id="lang-switch-btn" type="button" class="lang-switch-btn" title="Switch Language / تغيير اللغة" aria-label="Switch Language / تغيير اللغة">
+          <!-- Modern Segmented Letter Switcher (ع | E) -->
+          <span id="lang-seg-ar" class="lang-segment lang-segment-ar active" aria-hidden="true">ع</span>
+          <span id="lang-seg-en" class="lang-segment lang-segment-en" aria-hidden="true">E</span>
+          <span id="lang-letter-icon" class="hidden" aria-hidden="true"></span>
+          <span id="lang-btn-text" class="sr-only">English</span>
+        </button>
+      </div>
       <header class="w-full flex flex-col items-center text-center select-none">
         <svg
           class="brand-logo-svg"
@@ -419,9 +511,9 @@
           </g>
         </svg>
 
-        <p class="tagline-text">
-          <span class="text-[#d6b26d] font-medium">Premium</span> custom jewelry boxes for your treasures.
-          <span class="inline-block align-middle text-[#e5c176] ml-0.5" aria-hidden="true">✨</span>
+        <p class="tagline-text font-medium">
+          <span class="text-[#d6b26d] font-bold">أفخم علب مجوهرات</span> تفصيل لأغلى مقتنياتك.
+          <span class="inline-block align-middle text-[#e5c176] mr-1" aria-hidden="true">✨</span>
         </p>
       </header>
 
@@ -433,7 +525,7 @@
           href="https://www.instagram.com/elmanar_box?dlrf=bGRiM2s1MGx3Z3Ri"
           target="_blank"
           rel="noopener noreferrer"
-          data-platform="Instagram"
+          data-platform="إنستجرام"
           class="link-card"
         >
           <div class="icon-badge" aria-hidden="true">
@@ -443,13 +535,13 @@
               <circle cx="17.4" cy="6.6" r="1.35" fill="url(#goldMetallic)" />
             </svg>
           </div>
-          <div class="flex flex-col text-left">
-            <span class="card-title">Instagram</span>
-            <span class="card-subtitle">Our Collections &amp; Daily Stories</span>
+          <div class="flex flex-col text-right">
+            <span class="card-title font-bold">إنستجرام</span>
+            <span class="card-subtitle">أحدث التشكيلات واستوريهاتنا اليومية</span>
           </div>
           <div class="chevron-icon" aria-hidden="true">
             <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="9 6 15 12 9 18"></polyline>
+              <polyline points="15 6 9 12 15 18"></polyline>
             </svg>
           </div>
         </a>
@@ -460,7 +552,7 @@
           href="https://www.tiktok.com/@elmanar_box?_r=1&_t=ZS-9AyHKwJsTea"
           target="_blank"
           rel="noopener noreferrer"
-          data-platform="TikTok"
+          data-platform="تيك توك"
           class="link-card"
         >
           <div class="icon-badge" aria-hidden="true">
@@ -468,13 +560,13 @@
               <path d="M16.6 5.82A4.28 4.28 0 0 1 15.54 3h-3.09v12.4a2.59 2.59 0 0 1-2.59 2.5c-1.42 0-2.6-1.16-2.6-2.6 0-1.72 1.66-3.01 3.37-2.48V9.66c-3.45-.46-6.47 2.22-6.47 5.64 0 3.33 2.76 5.7 5.69 5.7 3.14 0 5.69-2.55 5.69-5.7V9.01a7.35 7.35 0 0 0 4.3 1.38V7.3s-1.88.09-3.24-1.48z" />
             </svg>
           </div>
-          <div class="flex flex-col text-left">
-            <span class="card-title">TikTok</span>
-            <span class="card-subtitle">Behind-the-Scenes &amp; Crafting</span>
+          <div class="flex flex-col text-right">
+            <span class="card-title font-bold">تيك توك</span>
+            <span class="card-subtitle">كواليس الشغل وتفاصيل التصنيع</span>
           </div>
           <div class="chevron-icon" aria-hidden="true">
             <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="9 6 15 12 9 18"></polyline>
+              <polyline points="15 6 9 12 15 18"></polyline>
             </svg>
           </div>
         </a>
@@ -485,7 +577,7 @@
           href="https://t.me/ELMANARBOX"
           target="_blank"
           rel="noopener noreferrer"
-          data-platform="Telegram"
+          data-platform="تيليجرام"
           class="link-card"
         >
           <div class="icon-badge" aria-hidden="true">
@@ -493,13 +585,13 @@
               <path d="M21.4 3.4c-.4-.3-1-.3-1.6-.1L2.9 10.1c-.8.3-1.1.8-1 1.3.1.5.5.8 1.2 1l4.3 1.4 10-6.3c.5-.3.9-.1.5.2l-8.1 7.3-.3 4.4c.4 0 .6-.2.9-.4l2.1-2 4.4 3.2c.8.5 1.4.2 1.6-.8L21.9 4.7c.2-.6 0-1.1-.5-1.3z" />
             </svg>
           </div>
-          <div class="flex flex-col text-left">
-            <span class="card-title">Telegram</span>
-            <span class="card-subtitle">Order Inquiries &amp; Updates</span>
+          <div class="flex flex-col text-right">
+            <span class="card-title font-bold">تيليجرام</span>
+            <span class="card-subtitle">استفسارات ومتابعة الأوردرات</span>
           </div>
           <div class="chevron-icon" aria-hidden="true">
             <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="9 6 15 12 9 18"></polyline>
+              <polyline points="15 6 9 12 15 18"></polyline>
             </svg>
           </div>
         </a>
@@ -510,7 +602,7 @@
           href="https://wa.me/qr/JHVONO4AXFGNF1"
           target="_blank"
           rel="noopener noreferrer"
-          data-platform="WhatsApp"
+          data-platform="واتساب"
           class="link-card"
         >
           <div class="icon-badge" aria-hidden="true">
@@ -518,13 +610,13 @@
               <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2zm0 18.15c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.26 8.26 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.23 8.23zm4.52-6.16c-.25-.12-1.47-.72-1.7-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-2-1.23-.74-.66-1.24-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.35-.77-1.84-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.23.25-.87.85-.87 2.07s.89 2.4 1.01 2.57c.12.17 1.75 2.67 4.24 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.06-.1-.23-.16-.48-.29z" />
             </svg>
           </div>
-          <div class="flex flex-col text-left">
-            <span class="card-title">WhatsApp</span>
-            <span class="card-subtitle">Direct Chat &amp; Custom Orders</span>
+          <div class="flex flex-col text-right">
+            <span class="card-title font-bold">واتساب</span>
+            <span class="card-subtitle">شات مباشر وطلبات التفصيل الخاصة</span>
           </div>
           <div class="chevron-icon" aria-hidden="true">
             <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="9 6 15 12 9 18"></polyline>
+              <polyline points="15 6 9 12 15 18"></polyline>
             </svg>
           </div>
         </a>
@@ -532,10 +624,10 @@
         <!-- 5. Facebook -->
         <a
           id="link-facebook"
-          href="https://www.facebook.com/share/16KDhZUbDvh/"
+          href="https://www.facebook.com/"
           target="_blank"
           rel="noopener noreferrer"
-          data-platform="Facebook"
+          data-platform="فيسبوك"
           class="link-card"
         >
           <div class="icon-badge" aria-hidden="true">
@@ -543,13 +635,13 @@
               <path d="M15.12 5.32H17V2.14A26.11 26.11 0 0 0 14.26 2c-2.72 0-4.58 1.66-4.58 4.7v2.62H6.61v3.56h3.07V22h3.68v-9.12h3.06l.46-3.56h-3.52V6.65c0-1.05.29-1.73 1.76-1.33z" />
             </svg>
           </div>
-          <div class="flex flex-col text-left">
-            <span class="card-title">Facebook</span>
-            <span class="card-subtitle">Updates &amp; Community</span>
+          <div class="flex flex-col text-right">
+            <span class="card-title font-bold">فيسبوك</span>
+            <span class="card-subtitle">صفحتنا الرسمية وأحدث العروض</span>
           </div>
           <div class="chevron-icon" aria-hidden="true">
             <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="9 6 15 12 9 18"></polyline>
+              <polyline points="15 6 9 12 15 18"></polyline>
             </svg>
           </div>
         </a>
@@ -560,7 +652,7 @@
           href="https://maps.app.goo.gl/SajZCpVkF5B8vcC36?g_st=ac"
           target="_blank"
           rel="noopener noreferrer"
-          data-platform="Our Showroom Location"
+          data-platform="موقع المعرض"
           class="link-card"
         >
           <div class="icon-badge" aria-hidden="true">
@@ -572,13 +664,13 @@
               <ellipse cx="12" cy="19.8" rx="6.2" ry="1.8" stroke="url(#goldMetallic)" stroke-width="1.6" />
             </svg>
           </div>
-          <div class="flex flex-col text-left">
-            <span class="card-title">Our Showroom Location</span>
-            <span class="card-subtitle">Find us on the map</span>
+          <div class="flex flex-col text-right">
+            <span class="card-title font-bold">موقع المعرض</span>
+            <span class="card-subtitle">شرفنا بالزيارة • عنواننا على الخريطة</span>
           </div>
           <div class="chevron-icon" aria-hidden="true">
             <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="9 6 15 12 9 18"></polyline>
+              <polyline points="15 6 9 12 15 18"></polyline>
             </svg>
           </div>
         </a>
@@ -588,7 +680,7 @@
     <!-- Bottom Footer -->
     <footer class="w-full flex flex-col items-center pt-2 pb-1 select-none">
       <p class="text-[#c0a26c] text-[11.5px] tracking-[0.14em] font-medium mb-2">
-        ELMANAR &bull; 2026
+        المنار لعلب المجوهرات &bull; 2026
       </p>
       <div class="flex items-center justify-center gap-2.5">
         <!-- Footer Instagram -->
@@ -597,8 +689,8 @@
           href="https://www.instagram.com/elmanar_box?dlrf=bGRiM2s1MGx3Z3Ri"
           target="_blank"
           rel="noopener noreferrer"
-          data-platform="Instagram"
-          aria-label="Instagram"
+          data-platform="إنستجرام"
+          aria-label="إنستجرام"
           class="footer-social-btn"
         >
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3">
@@ -614,8 +706,8 @@
           href="https://www.tiktok.com/@elmanar_box?_r=1&_t=ZS-9AyHKwJsTea"
           target="_blank"
           rel="noopener noreferrer"
-          data-platform="TikTok"
-          aria-label="TikTok"
+          data-platform="تيك توك"
+          aria-label="تيك توك"
           class="footer-social-btn"
         >
           <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
@@ -629,8 +721,8 @@
           href="https://t.me/ELMANARBOX"
           target="_blank"
           rel="noopener noreferrer"
-          data-platform="Telegram"
-          aria-label="Telegram"
+          data-platform="تيليجرام"
+          aria-label="تيليجرام"
           class="footer-social-btn"
         >
           <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
@@ -644,8 +736,8 @@
           href="https://wa.me/qr/JHVONO4AXFGNF1"
           target="_blank"
           rel="noopener noreferrer"
-          data-platform="WhatsApp"
-          aria-label="WhatsApp"
+          data-platform="واتساب"
+          aria-label="واتساب"
           class="footer-social-btn"
         >
           <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
@@ -656,11 +748,11 @@
         <!-- Footer Facebook -->
         <a
           id="footer-facebook"
-          href="https://www.facebook.com/share/16KDhZUbDvh/"
+          href="https://www.facebook.com/"
           target="_blank"
           rel="noopener noreferrer"
-          data-platform="Facebook"
-          aria-label="Facebook"
+          data-platform="فيسبوك"
+          aria-label="فيسبوك"
           class="footer-social-btn"
         >
           <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
@@ -674,8 +766,8 @@
           href="https://maps.app.goo.gl/SajZCpVkF5B8vcC36?g_st=ac"
           target="_blank"
           rel="noopener noreferrer"
-          data-platform="Showroom Map"
-          aria-label="Our Showroom Location"
+          data-platform="موقع المعرض"
+          aria-label="موقع المعرض"
           class="footer-social-btn"
         >
           <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
@@ -692,6 +784,8 @@
   <script>
     (function () {
       const toast = document.getElementById('status-toast');
+      const langBtn = document.getElementById('lang-switch-btn');
+      const langBtnText = document.getElementById('lang-btn-text');
       let toastTimer = null;
 
       function showToast(message) {
@@ -704,12 +798,224 @@
         }, 2400);
       }
 
+      // Bilingual translations dictionary
+      const i18n = {
+        ar: {
+          dir: 'rtl',
+          lang: 'ar',
+          title: 'المنار لعلب المجوهرات — الروابط الرسمية',
+          letterGlyph: 'E',
+          btnLabel: 'English',
+          btnTitle: 'Switch to English',
+          tagline: '<span class="text-[#d6b26d] font-bold">أفخم علب مجوهرات</span> تفصيل لأغلى مقتنياتك<span class="inline-block align-middle text-[#e5c176] mr-1" aria-hidden="true">✨</span>',
+          cards: {
+            'link-instagram': {
+              title: 'إنستجرام',
+              subtitle: 'أحدث التشكيلات واستوريهاتنا اليومية',
+              platform: 'إنستجرام'
+            },
+            'link-tiktok': {
+              title: 'تيك توك',
+              subtitle: 'كواليس الشغل وتفاصيل التصنيع',
+              platform: 'تيك توك'
+            },
+            'link-telegram': {
+              title: 'تيليجرام',
+              subtitle: 'استفسارات ومتابعة الأوردرات',
+              platform: 'تيليجرام'
+            },
+            'link-whatsapp': {
+              title: 'واتساب',
+              subtitle: 'شات مباشر وطلبات التفصيل الخاصة',
+              platform: 'واتساب'
+            },
+            'link-facebook': {
+              title: 'فيسبوك',
+              subtitle: 'صفحتنا الرسمية وأحدث العروض',
+              platform: 'فيسبوك'
+            },
+            'link-location': {
+              title: 'موقع المعرض',
+              subtitle: 'شرفنا بالزيارة • عنواننا على الخريطة',
+              platform: 'موقع المعرض'
+            }
+          },
+          footerText: 'المنار لعلب المجوهرات • 2026',
+          footerAria: {
+            'footer-instagram': 'إنستجرام',
+            'footer-tiktok': 'تيك توك',
+            'footer-telegram': 'تيليجرام',
+            'footer-whatsapp': 'واتساب',
+            'footer-facebook': 'فيسبوك',
+            'footer-location': 'موقع المعرض'
+          },
+          toastOpening: 'جاري فتح ',
+          toastSwitch: 'تم التبديل إلى اللغة العربية'
+        },
+        en: {
+          dir: 'ltr',
+          lang: 'en',
+          title: 'ELMANAR Jewelry Boxes — Official Links',
+          letterGlyph: 'ع',
+          btnLabel: 'عربي',
+          btnTitle: 'التبديل إلى اللغة العربية',
+          tagline: '<span class="text-[#d6b26d] font-bold">Premium</span> custom jewelry boxes for your treasures<span class="inline-block align-middle text-[#e5c176] ml-1" aria-hidden="true">✨</span>',
+          cards: {
+            'link-instagram': {
+              title: 'Instagram',
+              subtitle: 'Our Collections & Daily Stories',
+              platform: 'Instagram'
+            },
+            'link-tiktok': {
+              title: 'TikTok',
+              subtitle: 'Behind-the-Scenes & Crafting',
+              platform: 'TikTok'
+            },
+            'link-telegram': {
+              title: 'Telegram',
+              subtitle: 'Order Inquiries & Updates',
+              platform: 'Telegram'
+            },
+            'link-whatsapp': {
+              title: 'WhatsApp',
+              subtitle: 'Direct Chat & Custom Orders',
+              platform: 'WhatsApp'
+            },
+            'link-facebook': {
+              title: 'Facebook',
+              subtitle: 'Updates & Official Community',
+              platform: 'Facebook'
+            },
+            'link-location': {
+              title: 'Our Showroom Location',
+              subtitle: 'Find us on the map',
+              platform: 'Showroom Location'
+            }
+          },
+          footerText: 'ELMANAR JEWELRY BOXES • 2026',
+          footerAria: {
+            'footer-instagram': 'Instagram',
+            'footer-tiktok': 'TikTok',
+            'footer-telegram': 'Telegram',
+            'footer-whatsapp': 'WhatsApp',
+            'footer-facebook': 'Facebook',
+            'footer-location': 'Our Showroom Location'
+          },
+          toastOpening: 'Opening ',
+          toastSwitch: 'Switched to English'
+        }
+      };
+
+      let currentLang = 'ar';
+      try {
+        const saved = localStorage.getItem('elmanar_lang');
+        if (saved && (saved === 'ar' || saved === 'en')) {
+          currentLang = saved;
+        }
+      } catch (e) {}
+
+      function applyLanguage(lang, announce) {
+        currentLang = lang;
+        try {
+          localStorage.setItem('elmanar_lang', lang);
+        } catch (e) {}
+
+        const dict = i18n[lang];
+        document.documentElement.lang = dict.lang;
+        document.documentElement.dir = dict.dir;
+        document.title = dict.title;
+
+        if (langBtnText) {
+          langBtnText.textContent = dict.btnLabel;
+        }
+        const segAr = document.getElementById('lang-seg-ar');
+        const segEn = document.getElementById('lang-seg-en');
+        if (segAr && segEn) {
+          if (lang === 'ar') {
+            segAr.classList.add('active');
+            segEn.classList.remove('active');
+          } else {
+            segEn.classList.add('active');
+            segAr.classList.remove('active');
+          }
+        }
+        if (langBtn) {
+          langBtn.setAttribute('title', dict.btnTitle);
+          langBtn.setAttribute('aria-label', dict.btnTitle);
+        }
+
+        // Tagline
+        const tagline = document.querySelector('.tagline-text');
+        if (tagline) {
+          tagline.innerHTML = dict.tagline;
+        }
+
+        // Cards
+        Object.keys(dict.cards).forEach(function (id) {
+          const card = document.getElementById(id);
+          if (!card) return;
+          const data = dict.cards[id];
+          const titleEl = card.querySelector('.card-title');
+          const subEl = card.querySelector('.card-subtitle');
+          const textWrap = card.querySelector('.flex.flex-col');
+          if (titleEl) titleEl.textContent = data.title;
+          if (subEl) subEl.textContent = data.subtitle;
+          if (textWrap) {
+            if (dict.dir === 'rtl') {
+              textWrap.classList.remove('text-left');
+              textWrap.classList.add('text-right');
+            } else {
+              textWrap.classList.remove('text-right');
+              textWrap.classList.add('text-left');
+            }
+          }
+          card.setAttribute('data-platform', data.platform);
+
+          // Update chevron direction: in RTL points left (15 6 9 12 15 18), in LTR points right (9 6 15 12 9 18)
+          const polyline = card.querySelector('.chevron-icon polyline');
+          if (polyline) {
+            polyline.setAttribute('points', dict.dir === 'rtl' ? '15 6 9 12 15 18' : '9 6 15 12 9 18');
+          }
+        });
+
+        // Footer text
+        const footerTextEl = document.querySelector('footer p');
+        if (footerTextEl) {
+          footerTextEl.textContent = dict.footerText;
+        }
+
+        // Footer icons
+        Object.keys(dict.footerAria).forEach(function (id) {
+          const btn = document.getElementById(id);
+          if (!btn) return;
+          const label = dict.footerAria[id];
+          btn.setAttribute('aria-label', label);
+          btn.setAttribute('data-platform', label);
+        });
+
+        if (announce) {
+          showToast(dict.toastSwitch);
+        }
+      }
+
+      // Initial application
+      applyLanguage(currentLang, false);
+
+      // Toggle button event
+      if (langBtn) {
+        langBtn.addEventListener('click', function () {
+          const nextLang = currentLang === 'ar' ? 'en' : 'ar';
+          applyLanguage(nextLang, true);
+        });
+      }
+
+      // Link click toast
       const allLinks = document.querySelectorAll('a[data-platform]');
       allLinks.forEach(function (link) {
         link.addEventListener('click', function () {
           const platform = link.getAttribute('data-platform') || 'Link';
-          const href = link.getAttribute('href') || '';
-          showToast('Opening ' + platform + ' (' + href + ')');
+          const dict = i18n[currentLang];
+          showToast(dict.toastOpening + platform + '...');
         });
       });
     })();
